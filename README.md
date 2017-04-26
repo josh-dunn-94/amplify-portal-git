@@ -29,13 +29,13 @@ In the frontend service you'll need to create a page accessible at `/` (e.g. loc
 The backend service can be started as follows,
 
 ```
-python backend/manage.py 8500
+python backend/manage.py runserver 8500
 ```
 
 The frontend service can be started as follows,
 
 ```
-python frontend/manage.py 8000
+python frontend/manage.py runserver 8000
 ```
 
 A user can visit the front end service on their browser @ `localhost:8000/`. A user cannot reach the backend service at `localhost:8500/` due to a firewall. However the front end service does have access to backend service via `localhost:8500/`. How would you enable the frontend service to access data that only the backend service is able to interface with and present that data to the user?
