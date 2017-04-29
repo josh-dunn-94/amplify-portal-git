@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="{% static 'main/css/main.css' %}" rel="stylesheet">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+	<script src="{% static 'main/js/main.js' %}"></script>
+	<title>People Bar Graph</title>
+</head>
+<body>
+	<h2>Number of Cars Owned by Make:</h2>
+	<div style="display: none">
+		{% for car,count in cars %}
+			<span class="car-makes">{{ car }}</span>
+			<span class="car-counts">{{ count }}</span>
+		{% endfor %}
+	</div>
+	
+	<canvas id="bar_graph"></canvas>
+</body>
+</html> 
